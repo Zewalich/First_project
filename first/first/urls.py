@@ -16,13 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from seasons.views import index, index_by_number
-from seasons.views import index_month
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('<int:seasons>/', index_by_number),
     path('<str:seasons>/', index),
-    path('<str:seasons>/<str:month>', index_month)
 
 
 

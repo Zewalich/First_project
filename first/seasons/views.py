@@ -26,24 +26,12 @@ def index(request, seasons: str):
         return HttpResponse(b)
     else:
         return HttpResponseNotFound(f'{seasons} сезона нет!')
-def index_month(request, seasons):
-    b = month_dict.get(seasons/month, None)
-        return HttpResponse(b)
 
 def index_by_number(request, seasons: int):
     return HttpResponse(f"Number is {seasons} ")
 
 
 
-# def index(request, seasons):
-#     if seasons == "autumn":
-#         return HttpResponse('Осень пора года когда начинается холод и понимаешь что скоро зима!')
-#     elif seasons == "summer":
-#         return HttpResponse('Лето самая крутая пора года!')
-#     elif seasons == "spring":
-#         return HttpResponse('Весна пора года когда предвкушаешь тепло')
-#     elif seasons == "winter":
-#         return HttpResponse('Зима не любимая пора года!')
 
 
 
